@@ -17,3 +17,26 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+body {
+background: rgba(255,255,255,1);
+background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(155,222,243,0.69) 50%, rgba(255,255,255,0.37) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(50%, rgba(155,222,243,0.69)), color-stop(100%, rgba(255,255,255,0.37)));
+background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(155,222,243,0.69) 50%, rgba(255,255,255,0.37) 100%);
+background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(155,222,243,0.69) 50%, rgba(255,255,255,0.37) 100%);
+background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(155,222,243,0.69) 50%, rgba(255,255,255,0.37) 100%);
+background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(155,222,243,0.69) 50%, rgba(255,255,255,0.37) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1 );
+}
+
+.round-image-50 {
+    background-color: white;
+    border: 1px solid #d9d9d9;
+    border-radius: 25px;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    height: 45px;
+    width: 45px;
+    overflow: hidden;
+    text-align: center;
+    img { width: 100% }
+}
