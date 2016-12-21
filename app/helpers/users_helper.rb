@@ -9,7 +9,7 @@ module UsersHelper
 	end
 
 	def name
-		@user.name
+		@user.name + " ~ " + @user.last_name
 	end
 
 	def correct_user?(user)
