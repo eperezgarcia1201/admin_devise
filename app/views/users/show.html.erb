@@ -11,7 +11,9 @@
 			<div class="panel-heading">
 				<h3 class="panel-title text-center">
 						<%= name %>
-						<span class="glyphicon glyphicon-earphone"></span><%= @user.phone_number  do %>
+					<%= fa_icon "mobile-phone"  %> <%= @user.phone_number   %>
+					
+					
 				</h3>
 			</div>
 				<div class="pane-body">
