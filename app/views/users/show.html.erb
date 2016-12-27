@@ -1,27 +1,61 @@
-<div class="row">
-	<div class="col-md-8 col-md-offset-2 text-center">
-		<%= avatar  %>
+
+	<div class="row profile">
+		<div class="col-md-8 col-md-offset-2 text-center">
+			<div class="profile-sidebar">
+				<!-- SIDEBAR USERPIC -->
+				<div class="profile-userpic">
+					<%= avatar  %>
+				</div>
+				<!-- END SIDEBAR USERPIC -->
+				<!-- SIDEBAR USER TITLE -->
+				<div class="profile-usertitle">
+					<div class="profile-usertitle-name">
+						<%= name %>
+					</div>
+					<div class="profile-usertitle-job">
+						<cite>Member Since: <strong><%= date_reg %></strong></cite>
+					</div>
+				</div>
+				<!-- END SIDEBAR USER TITLE -->
+				<!-- SIDEBAR BUTTONS -->
+				<div class="profile-userbuttons">
+					<button type="button" class="btn btn-success btn-sm">Follow</button>
+					<button type="button" class="btn btn-danger btn-sm">Message</button>
+				</div>
+				<!-- END SIDEBAR BUTTONS -->
+				<!-- SIDEBAR MENU -->
+				<div class="profile-usermenu">
+					<ul class="nav">
+						<li class="active">
+							<a href="#">
+							<%= fa_icon "mobile-phone"  %> <%= @user.phone_number   %> </a>
+						</li>
+						<li>
+							
+							<% if correct_user?(@user) || current_user.admin? %>
+							<%= link_to "Settings", edit_user_registration_path(@user) %>
+						</li>
+						<% end %>
+						<li>
+							<a href="#" target="_blank">
+							<i class="glyphicon glyphicon-ok"></i>
+							Tasks </a>
+						</li>
+						<li>
+							<a href="#">
+							<i class="glyphicon glyphicon-flag"></i>
+							Help </a>
+						</li>
+					</ul>
+				</div>
+				<!-- END MENU -->
+			</div>
+		</div>
+		<div class="col-md-9">
+            <div class="profile-content">
+			   
+            </div>
+		</div>
 	</div>
 </div>
 
-<!-- @user info -->
-<div class="row">
-	<div class="col-md-8 col-md-offset-2">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h3 class="panel-title text-center">
-						<%= name %>
-					<%= fa_icon "mobile-phone"  %> <%= @user.phone_number   %>
-					
-					
-				</h3>
-			</div>
-				<div class="pane-body">
-					<cite>Member Since: <strong><%= date_reg %></strong></cite>
-					<% if correct_user?(@user) || current_user.admin? %>
-					<%= link_to "Edit Profile", edit_user_registration_path(@user), class: "btn btn-xs btn-success" %>
-					<% end %>
-				</div>
-			</div>
-	</div>
-</div>
